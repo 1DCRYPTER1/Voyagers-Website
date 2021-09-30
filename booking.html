@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=number], input[type=date], input[type=seelect] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+select{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  color: white;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("images/voyagers.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button1{
+  position: absolute;
+  top: 50%;
+  left: 47%;
+
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #000000;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  background-image: url(images/bookbg.gif);
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body class="bg">
+
+<button class="button1" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Book Now</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <font color="white">
+      <label for="uname"><b>Enter Your Full Name</b></label>
+      <input type="text" placeholder="Full Name" name="uname" required>
+      </font>
+
+      <font color="white">
+      <label for="psw"><b>Full Address</b></label>
+      <input type="text" placeholder="Full Address" name="add" required>
+      </font>
+
+      <font color="white">
+      <label for="psw"><b>Pin Code</b></label><br>
+      <input type="number" placeholder="Pin Code" name="psw" required>
+      </font>
+
+     <br> 
+     <br> 
+
+      <font color="white">
+      <label for="psw"><b>Contact Number</b></label><br>
+      <input type="number" placeholder="Contact Number" name="psw" required>
+      </font>
+
+     <br> 
+     <br> 
+
+     <font color="white">
+     <label for="psw"><b>Occasion ?</b></label><br>
+     </font>
+     <select>
+      <option value="volvo">Select</option>
+      <option value="saab">Wedding</option>
+      <option value="opel">Baptism</option>
+      <option value="audi">Birthday Party</option>
+      <option value="audi">Charity Show</option>
+      </select>
+
+     <br> 
+     <br> 
+
+     <font color="white">
+      <label for="psw"><b>When you want us ?</b></label><br>
+      <input type="date" id="myDate" value="2014-02-09">
+      </font>
+
+     <br> 
+     <br> 
+
+    <button onclick="myFunction()">Book</button>  
+    <p style="font-color:white;" id="demo"></p>
+    <script>
+    function myFunction() {
+    var x = document.getElementById("myDate").value;
+    document.getElementById("demo").innerHTML = x;
+    }
+    </script>
+      
+
+    <div class="container" style="background-image: url(images/bookbg.gif);">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+      
+
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+  <DIV class="footer">
+  <P style="color:black; font-size:12px;">Copyright 2019, Voyagers. All Rights Reserved.
+  Developed By: Tech ArNeSh<sup style='font-size:6px;'>TM</sup> <br><A href="https://www.instagram.com/voyagers_the_band/"> <img src="images/Instagram.png"></A> | <A href="www.facebook.com"><img src="images/Facebook.png"></A> | <A href="www.twitter.com"><img src="images/Twitter.png"></A></P>
+  </DIV>
+
+</body>
+</html>
