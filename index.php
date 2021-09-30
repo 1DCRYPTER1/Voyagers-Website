@@ -269,48 +269,10 @@ else{
     window.onload=loadSnackbar
   </SCRIPT>
 
-  <!--<STYLE>
-  .parallax { 
-    background-image: url("voyagers.jpg");
-    height: 400px; 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  </STYLE>
-  <DIV class="parallax"></DIV>-->
-
   <P> Experience an ethereal musical experience! </P>
   <P> An authentic Indian musical experience infused with the famous Kokani and Goan flavour of Vasai. </P>
   <HR>
 
-<!--<button class="open-button" onclick="openForm()">Open Form</button>  
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>-->
 
 <button onclick="window.location.href='booking.html'" class="button"> <B> Book Now </B> </button>
 <BR>
