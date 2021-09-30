@@ -185,14 +185,6 @@ body {
   <div class="column">
     <img src="images/4.jpg" alt="Team" style="width:100%" onclick="myFunction(this);">
   </div>
-<!--<div class="row">
-  	<div class="column">
-    <img src="8.jpg" alt="Merces Fiesta" style="width:100%" onclick="myFunction(this);">
-  	</div>
-  	<div class="column">
-    <img src="5.jpg" alt="Drums" style="width:100%" onclick="myFunction(this);">
-  	</div>
-</div>-->
 
 <div class="container">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
